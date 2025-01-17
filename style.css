@@ -1,0 +1,97 @@
+/* Загальні стилі */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f8fb;
+}
+
+header {
+  background-color: #355aa0;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Контейнер для погоди */
+.weather-container {
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 100%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Форма для вводу міста */
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.weather-info input {
+  width: 70%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.weather-info button {
+  width: 25%;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #355aa0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.weather-info button:hover {
+  background-color: #45a049;
+}
+
+/* Стилі для інформації про погоду */
+.weather-details h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.weather-details p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Стилі для карти */
+#map {
+  width: 100%;
+  height: 100vh; /* Завжди на весь екран */
+  position: relative;
+}
+
+/* Адаптивний дизайн */
+@media (max-width: 768px) {
+  .weather-info {
+    flex-direction: column;
+  }
+
+  .weather-info input,
+  .weather-info button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
